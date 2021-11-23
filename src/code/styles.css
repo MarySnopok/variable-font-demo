@@ -1,4 +1,3 @@
-/* grade (GRAD) range is 88 (default) up to 150 */
 /* 
 	Weight axis: 100 – 700
 	Width axis: 85 – 100
@@ -10,7 +9,6 @@
 
 @font-face {
   font-family: "IBM Plex Sans Roman";
-  /* src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf"); */
   src: url("../assets/IBMPlexSansVar-Roman.ttf");
 }
 
@@ -26,11 +24,12 @@ body {
   text-align: center;
   min-height: 100vh;
   background-color: palevioletred;
+  color: #353535;
 }
 
 div {
-  width: 280px;
-  height: 280px;
+  width: 32vw;
+  height: 32vw;
   position: absolute;
   background: white;
   border-radius: 100%;
@@ -38,23 +37,19 @@ div {
   animation: sphere 4s linear infinite;
   padding: 10px;
   margin-top: -20px;
-  /* animation-delay: 100ms; */
 }
 
 h1 {
-  /* font-weight: 100;
-  font-size: 10vw;
-  line-height: 10vw; */
-  /* font-variation-settings: "wght" 100, "wdth" 85; */
   font-weight: 100;
   font-size: 10vw;
-  font-variation-settings: "GRAD" 80, "wght" 100, "wdth" 85;
+  font-variation-settings: "wght" 100, "wdth" 85;
 }
 
 h1 span {
   animation: wave 4000ms infinite both;
 }
 
+/* animation delays for each span */
 h1 span:nth-child(1) {
   animation-delay: var(--var-base-delay);
 }
@@ -90,163 +85,7 @@ h1 span:nth-child(9) {
   animation-delay: calc(var(--var-base-delay) + 1600ms);
 }
 
-h1:hover span {
-  /* animation-play-state: paused; */
-}
-
-/* Grad only */
-/* @keyframes wave {
-  0% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 80;
-  }
-  20% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 100;
-  }
-  50% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 120;
-  }
-  60% {
-    font-size: 20vw;
-    font-variation-settings: "GRAD" 150;
-  }
-  70% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 120;
-  }
-  80% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 100;
-  }
-  100% {
-    font-size: 10vw;
-    font-variation-settings: "GRAD" 80;
-  }
-} */
-
-/* "wght"  only  */
-/* @keyframes wave {
-  0% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 100;
-  }
-
-  20% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 417;
-  }
-  50% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 666;
-  }
-  60% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 700;
-  }
-  70% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 666;
-  }
-  80% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 417;
-  }
-
-  100% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 100;
-  }
-} */
-
-/* "wdth"  only  */
-/* @keyframes wave {
-  0% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 85;
-  }
-  20% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 90;
-  }
-  50% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 96;
-  }
-  60% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 100;
-  }
-  70% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 96;
-  }
-  80% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 90;
-  }
-
-  100% {
-    font-size: 10vw;
-    font-variation-settings: "wdth" 85;
-  }
-} */
-
-/* all in one */
-/* @keyframes wave {
-  0% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 100, "wdth" 85;
-  }
-  20% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 417, "wdth" 90;
-  }
-  50% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 666, "wdth" 95;
-  }
-  60% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 700, "wdth" 100;
-  }
-  70% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 666, "wdth" 95;
-  }
-  80% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 417, "wdth" 90;
-  }
-
-  100% {
-    font-size: 10vw;
-    font-variation-settings: "wght" 100, "wdth" 85;
-  }
-} */
-
-/* original option */
-/* @keyframes wave {
-  0% {
-    font-variation-settings: "wght" 100, "wdth" 85;
-    font-size: 10vw;
-  }
-  60% {
-    font-variation-settings: "wght" 650, "wdth" 90;
-    font-size: 10vw;
-  }
-  80% {
-    font-variation-settings: "wght" 789, "wdth" 100;
-    font-size: 10vw;
-  }
-
-  100% {
-    font-variation-settings: "wght" 100, "wdth" 85;
-    font-size: 10vw;
-  }
-} */
-
+/* variable font animation */
 @keyframes wave {
   0% {
     font-variation-settings: "wght" 100, "wdth" 80;
@@ -271,6 +110,7 @@ h1:hover span {
   }
 }
 
+/* div ball animation */
 @keyframes sphere {
   0% {
     transform: translateX(-120%);
